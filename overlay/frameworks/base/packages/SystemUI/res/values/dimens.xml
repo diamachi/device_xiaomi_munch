@@ -20,6 +20,9 @@
     <dimen name="config_rounded_mask_size_top">@dimen/config_rounded_mask_size</dimen>
     <dimen name="config_rounded_mask_size_bottom">@dimen/config_rounded_mask_size</dimen>
 
+<!-- for 20dp of padding at 2.75px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">52px</dimen>
+
     <!-- The padding on the side of the navigation bar. Must be greater than or equal to
          navigation_extra_key_width -->
     <dimen name="navigation_side_padding">80px</dimen>
@@ -45,5 +48,10 @@
     <dimen name="status_bar_header_height_keyguard">@dimen/navigation_side_padding</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
-    <dimen name="status_bar_padding_top">7dp</dimen>
-</resources>
+    <dimen name="status_bar_padding_top">1dp</dimen>
+
+<!-- Burn-in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+    <dimen name="burnin_protection_horizontal_shift">1dp</dimen>
+   
+    </resources>

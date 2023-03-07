@@ -8,8 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common awaken stuff.
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 # Inherit from device makefile
 $(call inherit-product, device/xiaomi/munch/device.mk)
@@ -19,9 +19,22 @@ ifneq ($(NO_GMS),true)
 $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 endif
 
+#Set Boot animation Resolution
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# GApps
+TARGET_GAPPS_ARCH := arm64
+USE_GAPPS := true
+
+# Google Recorder
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+# Google Assistant
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
 TARGET_SUPPORTS_CALL_RECORDING := true
 
-PRODUCT_NAME := lineage_munch
+PRODUCT_NAME := awaken_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
